@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Character</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class="container">
+    <h1>Create a Character:</h1>
+
+    <form th:action="@{/characters}"
+          th:object="${characterForm}"
+          method="POST">
+        <label for="name">Name:</label>
+        <input type="text" th:field="*{name}"/>
+        <br/>
+        <label for="characterType">Character type:</label>
+        <input type="text" th:field="*{characterType}"/>
+        <br/>
+        <input type="submit" value="Create"/>
+    </form>
+
+    <br/>
+
+    <!-- Check if errorMessage is not null and not empty -->
+
+    <div th:if="${errorMessage}" th:utext="${errorMessage}"
+         style="color:red;font-style:italic;">
+        ...
+    </div>
+</div>
+
+</body>
+</html>

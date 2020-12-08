@@ -1,0 +1,23 @@
+
+h2 {
+    color: #035451;
+}
+
+div {
+    text-align: center;
+}
+.characterBox {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+.characterType {
+    color: #035416;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}

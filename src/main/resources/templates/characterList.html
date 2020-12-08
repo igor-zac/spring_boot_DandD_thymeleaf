@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character list</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class="container">
+    <h1>Character List</h1>
+    <a href="addCharacter">Add Character</a>
+    <br/><br/>
+    <div class="characterBox" th:each="character : ${characters}">
+        <h2 th:text="${character.name}"></h2>
+        <p>Character type: <span class="characterType" th:text="${character.characterType}"></span></p>
+    </div>
+</div>
+</body>
+</html>
