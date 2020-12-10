@@ -8,12 +8,14 @@
 <body>
 <div class="container">
     <h1>Character List</h1>
-    <a href="addCharacter">Add Character</a>
+    <a href="/characters/new">Add Character</a>
     <br/><br/>
-    <div class="characterBox" th:each="character : ${characters}">
-        <h2 th:text="${character.name}"></h2>
-        <p>Character type: <span class="characterType" th:text="${character.characterType}"></span></p>
-    </div>
+    <a th:each="character : ${characters}" th:href="'http://localhost:8083/characters/' + ${character.id}">
+        <div class="characterBox">
+            <h2 th:text="${character.name}"></h2>
+            <p>Character type: <span class="characterType" th:text="${character.characterType}"></span></p>
+        </div>
+    </a>
 </div>
 </body>
 </html>

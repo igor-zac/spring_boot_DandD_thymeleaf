@@ -4,16 +4,13 @@ public class Character {
 
     private int id;
     private String name;
-    private CharacterType characterType;
+    private String characterType;
 
 
     public Character() {
-    }
-
-    public Character(int id, String name, CharacterType characterType) {
-        this.id = id;
-        this.name = name;
-        this.characterType = characterType;
+        this.id = -1;
+        this.name = "";
+        this.characterType = "";
     }
 
     public int getId() {
@@ -32,11 +29,11 @@ public class Character {
         this.name = name;
     }
 
-    public CharacterType getCharacterType() {
+    public String getCharacterType() {
         return characterType;
     }
 
-    public void setCharacterType(CharacterType characterType) {
+    public void setCharacterType(String characterType) {
         this.characterType = characterType;
     }
 
