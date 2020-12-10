@@ -53,4 +53,13 @@ public class CharactersService {
 
         return response;
     }
+
+    public ResponseEntity<Character> getCharacter(int characterId)
+    {
+        String characterUrl = url + "/" + String.valueOf(characterId);
+
+        ResponseEntity<Character> response = restTemplate.getForEntity(characterUrl, Character.class);
+
+        return response;
+    }
 }

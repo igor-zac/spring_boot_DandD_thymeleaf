@@ -38,10 +38,17 @@ public class CharacterController {
         Character character = findById(id);
 
         if (character == null) {
+            character = charactersService.getCharacter(id).getBody();
+        }
+
+        if (character == null) {
+
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND, "Page not found"
             );
         }
+
+        characters.add(character);
 
         model.addAttribute("character", character);
 
