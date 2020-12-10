@@ -13,6 +13,7 @@
     <a href="/characters/new" class="mb-2">
         <button class="btn btn-primary">Add Character</button>
     </a>
+
     <a class="characterBox characterLink d-block mt-3"
        th:each="character : ${characters}"
        th:href="'http://localhost:8083/characters/' + ${character.id}">

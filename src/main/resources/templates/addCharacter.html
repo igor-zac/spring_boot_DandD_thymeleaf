@@ -11,7 +11,8 @@
 <div class="container">
     <h1>Create a Character</h1>
 
-    <form th:action="@{/characters}"
+    <form class="mt-5"
+          th:action="@{/characters}"
           th:object="${characterForm}"
           method="POST">
 
@@ -32,14 +33,17 @@
         <button type="submit" class="btn btn-primary mt-2">Create</button>
     </form>
 
-    <br/>
-
     <!-- Check if errorMessage is not null and not empty -->
 
-    <div th:if="${errorMessage}" th:utext="${errorMessage}"
+    <div class="mt-2" th:if="${errorMessage}"
+         th:utext="${errorMessage}"
          style="color:red;font-style:italic;">
         ...
     </div>
+
+    <a href="/characters">
+        <button class="btn btn-secondary mt-3">Return to character list</button>
+    </a>
 </div>
 
 <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
